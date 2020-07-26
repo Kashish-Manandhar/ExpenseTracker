@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/hometoolbar"/>
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Name"
+       android:textStyle="bold"
+       android:textSize="25sp"
+       android:layout_marginTop="20dp"
+       android:padding="10dp"
+       android:id="@+id/userName"
+       android:layout_below="@id/hometoolbar"
+       android:fontFamily="@font/cosmic"
+       />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/balance_head"
+        android:text="Balance"
+        android:textSize="18sp"
+        android:layout_below="@id/userName"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/cosmic"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/balance_amnt"
+        android:text="Rs 10,000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@id/balance_head"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/cosmic"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_layout"
+        android:layout_below="@id/balance_amnt"
+        app:cardCornerRadius="15dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Income"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/cosmic"
+            android:id="@+id/home_income_id"
+            android:gravity="center_horizontal"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            android:id="@+id/increase_income"
+
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Expenses"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/cosmic"
+        android:id="@+id/home_expense_id"
+        android:layout_weight="1"
+        />
+
+
+</LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Amount"
+                    android:textSize="25sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/incomeamt"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/cosmic"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Amount"
+                    android:textSize="25sp"
+                    android:id="@+id/expenseamt"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/cosmic"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/card_layout2"
+        android:layout_below="@id/card_layout"
+        app:cardCornerRadius="10dp"
+        >
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Details"
+                   android:id="@+id/tVdetails"
+                   android:textStyle="bold"
+                   android:textSize="25dp"
+                   android:gravity="left"/>
+               <androidx.recyclerview.widget.RecyclerView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:id="@+id/recyclerView"
+                   android:layout_below="@id/tVdetails"
+                   android:background="#90a4ae"/>
+
+           </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+       <com.google.android.material.floatingactionbutton.FloatingActionButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
+           android:layout_marginBottom="20dp"
+           android:layout_marginLeft="20dp"
+           android:background="@color/colorAccent"
+           app:fabSize="normal"
+           android:id="@+id/actioin_button"
+           android:src="@drawable/ic_add"
+           />
+
+
+
+
+</RelativeLayout>

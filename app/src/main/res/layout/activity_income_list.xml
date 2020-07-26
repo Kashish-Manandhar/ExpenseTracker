@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IncomeList">
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/incomelist_tool"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/incomelist_tool"
+        android:id="@+id/totalincometV"
+        android:fontFamily="@font/cosmic"
+        android:gravity="right"
+        android:textSize="20sp"
+        android:layout_marginRight="20dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/totalincometV"
+        android:id="@+id/incomelist_rec"
+        android:background="#90a4ae"/>
+
+</RelativeLayout>

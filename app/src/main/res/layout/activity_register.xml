@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/register_Head"
+         android:textStyle="bold"
+         android:textSize="25sp"
+         android:layout_marginLeft="20dp"
+         />
+
+     <com.google.android.material.textfield.TextInputLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/registerName"
+         android:layout_below="@id/register_Head"
+         android:background="@drawable/round_edt"
+         android:layout_marginLeft="20dp"
+         android:layout_marginRight="20dp"
+         >
+          <EditText
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:hint="Full Name"/>
+
+     </com.google.android.material.textfield.TextInputLayout>
+     <com.google.android.material.textfield.TextInputLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/registerEmail"
+         android:layout_below="@id/registerName"
+         android:background="@drawable/round_edt"
+         android:layout_marginLeft="20dp"
+         android:layout_marginRight="20dp"
+         >
+          <EditText
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:hint="Email"
+              android:inputType="textEmailAddress"/>
+
+     </com.google.android.material.textfield.TextInputLayout>
+     <com.google.android.material.textfield.TextInputLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/registerPassword"
+         android:layout_below="@id/registerEmail"
+         android:background="@drawable/round_edt"
+         android:layout_marginLeft="20dp"
+         android:layout_marginRight="20dp"
+         app:passwordToggleEnabled="true"
+         >
+          <EditText
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:hint="Password"
+              android:inputType="textPassword"/>
+
+     </com.google.android.material.textfield.TextInputLayout>
+
+     <Button
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Register"
+         android:layout_marginLeft="20dp"
+         android:layout_marginRight="20dp"
+         android:layout_below="@id/registerPassword"
+         android:id="@+id/registerBtn"/>
+
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Already Have an Account? Sign in."
+         android:id="@+id/register_login"
+         android:layout_below="@id/registerBtn"
+         android:layout_marginLeft="20dp"
+         android:layout_marginRight="20dp"
+
+         android:gravity="center_horizontal"/>
+
+</RelativeLayout>
